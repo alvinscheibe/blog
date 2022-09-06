@@ -1,0 +1,47 @@
+
+/*****************/
+/*  Timeline     */
+/*****************/
+.timeline {
+    @apply after:content-[''] after:absolute after:top-0 after:right-0 after:left-0 after:w-px after:h-full after:m-auto after:border-l-2 after:border-dashed after:border-gray-200 dark:after:border-gray-700;
+    .timeline-item {
+        .date-label-left,
+        .duration-right {
+            @apply after:content-[''] after:absolute after:rounded-full after:z-10 after:top-[9px] after:w-2.5 after:h-2.5 after:bg-indigo-600 before:content-[''] before:absolute before:rounded-full before:z-10 before:border-2 before:border-dashed before:border-gray-200 dark:before:border-gray-700 before:top-0 before:w-7 before:h-7 before:bg-white dark:before:bg-slate-900;
+        }
+        .date-label-left {
+            @apply float-right mr-6 after:-right-[37px] before:-right-[46px];
+        }
+        .duration-right {
+            @apply float-left mr-6 after:-left-[37px] before:-left-[46px];
+        }
+        .event{
+            &.event-description-right {
+                @apply text-left ml-6;
+            }
+            &.event-description-left {
+                @apply text-right mr-6;
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .timeline {
+        @apply ml-3 after:m-0 after:-ml-[7px];
+        .timeline-item {
+            .event {
+                &.event-description-right,
+                &.event-description-left {
+                    @apply text-left m-0 ml-6 #{!important};
+                }
+            }
+            .duration {
+                @apply float-left ml-6 mr-auto text-left after:-left-9 before:-left-11;
+                .event {
+                    @apply text-left ml-[15px] #{!important};
+                }
+            }
+        }
+    }
+}

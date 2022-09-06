@@ -16,6 +16,7 @@ module.exports = {
       lg: '1024px',
       xl: '1280px',
       '2xl': '1536px',
+      '3xl': '1910px'
     },
     fontFamily: {
       'nunito': ['"Nunito", sans-serif'],
@@ -70,6 +71,11 @@ module.exports = {
         3: '3',
         999: '999',
       },
+
+      backgroundImage: {
+        'blog-header-background': "url('/backgrounds/blog-header-background.png')",
+        'index-hero-background': "url('/backgrounds/index-hero-background.png')",
+      }
     },
   },
   plugins: [

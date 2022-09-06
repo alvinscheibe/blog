@@ -6,17 +6,26 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "codegen": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
     "@headlessui/react": "^1.6.6",
     "@heroicons/react": "^1.0.6",
+    "graphql": "16.5.0",
     "next": "12.2.5",
+    "next-themes": "^0.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sass": "^1.54.5"
+    "sass": "^1.54.5",
+    "urql": "2.2.3"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "^2.11.8",
+    "@graphql-codegen/import-types-preset": "^2.2.3",
+    "@graphql-codegen/typescript": "^2.7.3",
+    "@graphql-codegen/typescript-operations": "^2.5.3",
+    "@graphql-codegen/typescript-urql": "^3.6.4",
     "@tailwindcss/forms": "^0.5.2",
     "@tailwindcss/typography": "^0.5.4",
     "@types/node": "18.7.8",

@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+// Fonts
+@import "custom/fonts";
+
+// General
+@import "custom/general";
+
+// Components
+@import "components/buttons";
+@import "components/breadcrumb";
+
+// structure
+@import "custom/structure/topnav";
+@import "custom/structure/footer";
+
+// Pages
+@import "custom/pages/helper";
+@import "custom/pages/hero";
+@import "custom/pages/countdown";
+@import "custom/pages/portfolio";
+@import "custom/pages/timeline";
+@import "custom/pages/contact";
+
+// Plugins
+@import "custom/plugins/swiper-slider";
+@import "custom/plugins/testi";
+@import "custom/plugins/choices";
+@import "custom/plugins/datepicker";

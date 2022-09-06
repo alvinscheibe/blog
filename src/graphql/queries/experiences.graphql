@@ -1,0 +1,12 @@
+query Experiences {
+    experiences(orderBy: order_DESC) {
+        company
+        duration
+        job
+        description
+        order
+        companyImage {
+            url
+        }
+    }
+}

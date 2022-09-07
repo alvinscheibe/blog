@@ -4,6 +4,7 @@ import { client, ssrCache } from '../lib/urql';
 import { ExperiencesDocument, PageDocument, useExperiencesQuery, usePageQuery } from '../generated/graphql';
 import { ContactMe } from '../components/ContactMe';
 import { SectionExperience } from '../components/Sections/Experience';
+import SeoPage from '../components/SeoPage';
 
 const AboutMe: NextPage = () => {
   const [{ data: dataAboutMePage }] = usePageQuery({
@@ -12,10 +13,13 @@ const AboutMe: NextPage = () => {
     }
   });
   const [{ data: dataExperiences }] = useExperiencesQuery();
+  const title = 'About me';
 
   return (
     <>
-      <SectionHeader title={'About me'} />
+      <SeoPage title={title} />
+
+      <SectionHeader title={title} />
 
       <section className="relative md:py-24 py-16">
         <div className="container">

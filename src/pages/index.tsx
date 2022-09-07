@@ -6,6 +6,7 @@ import Head from 'next/head';
 import { ContactMe } from '../components/ContactMe';
 import { LatestPosts } from '../components/LatestPosts';
 import { Hero } from '../components/Hero';
+import SeoPage from '../components/SeoPage';
 
 const Home: NextPage = () => {
   const [{ data: dataHomePage }] = usePageQuery({
@@ -17,9 +18,7 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <Head>
-        <title>Alvin Scheibe</title>
-      </Head>
+      <SeoPage title={'Home'} />
 
       <Hero data={dataHomePage} />
 

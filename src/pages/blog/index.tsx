@@ -3,12 +3,16 @@ import { PostsDocument, usePostsQuery } from '../../generated/graphql';
 import { client, ssrCache } from '../../lib/urql';
 import PostCard from '../../components/PostCard';
 import { SectionHeader } from '../../components/Sections/SectionHeader';
+import SeoPage from '../../components/SeoPage';
 
 const Blog: NextPage = () => {
   const [{ data }] = usePostsQuery();
+  const title = 'Blogs & Articles';
 
   return (
     <>
+      <SeoPage title={title} />
+
       <SectionHeader title={'Blogs & Articles'} />
 
       <section className="relative md:py-24 py-16">

@@ -21,7 +21,7 @@ const AboutMe: NextPage = () => {
 
       <SectionHeader title={title} />
 
-      <section className="relative md:py-24 py-16">
+      <section className={'relative md:py-24 py-16'}>
         <div className="container">
           <div className="grid md:grid-cols-12 grid-cols-1 items-center gap-[60px]">
             <div className="lg:col-span-5 md:col-span-6">

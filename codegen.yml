@@ -1,6 +1,6 @@
 overwrite: true
 
-schema: 'https://api-sa-east-1.hygraph.com/v2/cl6ikzxzs4nz101uh6fob4zip/master'
+schema: ${env.API_ENVIRONMENT_GRAPHQL}
 
 documents: './src/graphql/**/*.graphql'
 

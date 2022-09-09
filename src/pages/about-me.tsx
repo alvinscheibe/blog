@@ -124,6 +124,6 @@ export const getStaticProps: GetStaticProps = async () => {
       urqlState: ssrCache.extractData()
     }
   }
-}
+};
 
 export default AboutMe;

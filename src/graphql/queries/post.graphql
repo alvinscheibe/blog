@@ -8,6 +8,7 @@ query Post($slug: String!) {
         publishedAt
         content {
             markdown
+            html
         }
         coverImage {
             url(
@@ -30,8 +31,8 @@ query Post($slug: String!) {
                     transformation: {
                         image: {
                             resize: {
-                                height: 40,
-                                width: 40
+                                height: 120
+                                width: 120
                                 fit: crop
                             }
                         }

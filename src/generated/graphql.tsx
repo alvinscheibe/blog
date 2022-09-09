@@ -6656,7 +6656,7 @@ export type PostQueryVariables = Exact<{
 }>;
 
 
-export type PostQuery = { __typename?: 'Query', post?: { __typename?: 'Post', title: string, excerpt?: string | null, tags: Array<string>, publishedAt?: any | null, content: { __typename?: 'RichText', markdown: string }, coverImage?: { __typename?: 'Asset', url: string } | null, author?: { __typename?: 'Author', name: string, id: string, picture?: { __typename?: 'Asset', url: string } | null } | null } | null };
+export type PostQuery = { __typename?: 'Query', post?: { __typename?: 'Post', title: string, excerpt?: string | null, tags: Array<string>, publishedAt?: any | null, content: { __typename?: 'RichText', markdown: string, html: string }, coverImage?: { __typename?: 'Asset', url: string } | null, author?: { __typename?: 'Author', name: string, id: string, picture?: { __typename?: 'Asset', url: string } | null } | null } | null };
 
 export type PostsQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -6735,6 +6735,7 @@ export const PostDocument = gql`
     publishedAt
     content {
       markdown
+      html
     }
     coverImage {
       url(transformation: {image: {resize: {width: 1400, height: 600, fit: crop}}})
@@ -6743,7 +6744,7 @@ export const PostDocument = gql`
       name
       id
       picture {
-        url(transformation: {image: {resize: {height: 40, width: 40, fit: crop}}})
+        url(transformation: {image: {resize: {height: 120, width: 120, fit: crop}}})
       }
     }
   }

@@ -45,7 +45,7 @@ const BlogPost: NextPage<IBlogPost> = ({ slug }) => {
                 name: data?.post?.author?.name,
                 pictureUrl: data?.post?.author?.picture?.url
               }}
-              dataTags={{
+              tags={{
                 tags: dataTags?.__type?.enumValues
               }}
             />

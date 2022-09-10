@@ -36,8 +36,9 @@ const AboutMe: NextPage = () => {
 
                   <ul className="list-none mt-4">
                     <li className="inline">
-                      <a href="" className="btn btn-icon btn-sm border border-gray-100 dark:border-gray-800 rounded-md hover:border-indigo-600 dark:hover:border-indigo-600 hover:bg-indigo-600 hover:text-white">
-                        <i data-feather="facebook" className="h-4 w-4"></i>
+                      <a href="" className="btn btn-icon btn-md border border-gray-100 dark:border-gray-800 rounded-md hover:border-indigo-600 dark:hover:border-indigo-600 hover:bg-indigo-600 hover:text-white">
+                        {/*<i data-feather="facebook" className="h-4 w-4"></i>*/}
+                        <i className={'mdi mdi-github'}></i>
                       </a>
                     </li>
                     <li className="inline">

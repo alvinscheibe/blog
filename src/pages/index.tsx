@@ -2,7 +2,6 @@ import type { NextPage } from 'next';
 import { GetStaticProps } from 'next';
 import { client, ssrCache } from '../lib/urql';
 import { LastestPostsDocument, PageDocument, useLastestPostsQuery, usePageQuery } from '../generated/graphql';
-import Head from 'next/head';
 import { ContactMe } from '../components/ContactMe';
 import { LatestPosts } from '../components/LatestPosts';
 import { Hero } from '../components/Hero';

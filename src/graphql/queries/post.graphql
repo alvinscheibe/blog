@@ -6,10 +6,7 @@ query Post($slug: String!) {
         excerpt
         tags
         publishedAt
-        content {
-            markdown
-            html
-        }
+        content
         coverImage {
             url(
                 transformation: {

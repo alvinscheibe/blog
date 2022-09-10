@@ -35,15 +35,15 @@ const AboutMe: NextPage = () => {
                   <p className="text-slate-400 mt-2">Follow me on the links bellow:</p>
 
                   <ul className="list-none mt-4">
-                    <li className="inline">
+                    <li className="inline mr-2">
                       <a href="" className="btn btn-icon btn-md border border-gray-100 dark:border-gray-800 rounded-md hover:border-indigo-600 dark:hover:border-indigo-600 hover:bg-indigo-600 hover:text-white">
                         {/*<i data-feather="facebook" className="h-4 w-4"></i>*/}
-                        <i className={'mdi mdi-github'}></i>
+                        <i className={'mdi mdi-github text-2xl'}></i>
                       </a>
                     </li>
                     <li className="inline">
-                      <a href="" className="btn btn-icon btn-sm border border-gray-100 dark:border-gray-800 rounded-md hover:border-indigo-600 dark:hover:border-indigo-600 hover:bg-indigo-600 hover:text-white">
-                        <i data-feather="instagram" className="h-4 w-4"></i>
+                      <a href="" className="btn btn-icon btn-md border border-gray-100 dark:border-gray-800 rounded-md hover:border-indigo-600 dark:hover:border-indigo-600 hover:bg-indigo-600 hover:text-white">
+                        <i className={'mdi mdi-linkedin text-2xl'}></i>
                       </a>
                     </li>
                   </ul>

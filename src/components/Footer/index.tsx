@@ -7,7 +7,7 @@ export function Footer() {
         <div className="container text-center">
           <div className="grid md:grid-cols-2 items-center">
             <div className="md:text-left text-center">
-              <p className="mb-0">{code} with <i className="mdi mdi-heart text-red-600"></i> by Alvin Scheibe.</p>
+              <p className="mb-0">{code} with <i className="mdi mdi-heart text-indigo-600"></i> by Alvin Scheibe.</p>
             </div>
 
             <div className="md:text-right text-center mt-6 md:mt-0">

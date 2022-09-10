@@ -8,12 +8,12 @@ export function Menu() {
           <a href="">
             <span className="login-btn-primary">
               <span className="btn btn-icon rounded-full bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white">
-                <CodeIcon className={'h-5 w-5'} />
+                <i className={'mdi mdi-github text-2xl'}></i>
               </span>
             </span>
             <span className="login-btn-light">
               <span className="btn btn-icon rounded-full bg-gray-50 hover:bg-gray-200 dark:bg-slate-900 dark:hover:bg-gray-700 hover:border-gray-100 dark:border-gray-700 dark:hover:border-gray-700">
-                <CodeIcon className={'h-5 w-5'} />
+                <i className={'mdi mdi-github text-2xl'}></i>
               </span>
             </span>
           </a>

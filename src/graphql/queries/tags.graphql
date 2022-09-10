@@ -1,0 +1,7 @@
+query Tags {
+    __type(name: "Tags") {
+        enumValues {
+            name
+        }
+    }
+}

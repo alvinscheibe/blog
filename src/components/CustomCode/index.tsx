@@ -15,7 +15,7 @@ const CustomCode = ({ node, className, children, ...props }:  Pick<DetailedHTMLP
       {String(children).replace(/\n$/, '')}
     </SyntaxHighlighter>
   ) : (
-    <code className={'text-red-600'} {...props}>
+    <code className={'px-2 text-slate-400 bg-gray-100 dark:bg-slate-800 text-sm rounded-md shadow dark:shadow-gray-800'} {...props}>
       {children}
     </code>
   );

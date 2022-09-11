@@ -19,6 +19,7 @@ query Post($slug: String!) {
                     }
                 }
             )
+            fileName
         }
         author {
             name

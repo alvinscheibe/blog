@@ -9,6 +9,7 @@ import ReactMarkdown from 'react-markdown';
 import CustomCode from '../../components/CustomCode';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
+import { BlogPostDetail } from '../../components/Blog/BlogPostDetail';
 
 interface IBlogPost {
   slug: string;
@@ -29,33 +30,16 @@ const BlogPost: NextPage<IBlogPost> = ({ slug }) => {
 
       <SectionHeader title={title} />
 
-      <section className={'relative md:py-24 py-16'}>
+      <section className={'relative md:py-12 py-8'}>
         <div className={'container'}>
           <div className={'grid md:grid-cols-12 grid-cols-1 gap-[30px]'}>
-            <div className={'lg:col-span-8 md:col-span-6'}>
-              <div className={'p-6 rounded-md shadow dark:shadow-gray-800'}>
-
-                <img src={data?.post?.coverImage?.url} className="rounded-md" alt={data?.post?.title} />
-                {/*Colocar o dia da publicação*/}
-
-                <div className={'mt-6'}>
-                  <ReactMarkdown
-                    remarkPlugins={[remarkGfm]}
-                    rehypePlugins={[rehypeRaw]}
-                    components={{
-                      h1: (props) => <h1 className={'mt-4 mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold'} {...props} />,
-                      h2: (props) => <h2 className={'mt-4 mb-4 md:text-2xl md:leading-normal text-1xl leading-normal font-semibold'} {...props} />,
-                      p: (props) => <p className={'text-slate-400 pt-3 pb-3'} {...props} />,
-                      blockquote: (props) => <blockquote className={'text-slate-400 italic border-x-4 border-indigo-600 rounded-tl-xl rounded-br-xl mt-3 mb-3 pl-3 pr-3'} {...props} />,
-                      code: CustomCode,
-                      strong: (props) => <strong className={'text-indigo-600 font-semibold'} {...props} />
-                    }}
-                  >
-                    {data?.post?.content?? ''}
-                  </ReactMarkdown>
-                </div>
-              </div>
-            </div>
+            <BlogPostDetail
+              coverImageUrl={data?.post?.coverImage?.url}
+              coverImageFileName={data?.post?.coverImage?.fileName}
+              tags={data?.post?.tags}
+              publishedAt={data?.post?.publishedAt}
+              content={data?.post?.content}
+            />
 
             <BlogPostSideBar
               author={{

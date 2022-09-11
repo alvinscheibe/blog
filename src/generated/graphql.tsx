@@ -6810,7 +6810,7 @@ export type PostQueryVariables = Exact<{
 }>;
 
 
-export type PostQuery = { __typename?: 'Query', post?: { __typename?: 'Post', title: string, excerpt?: string | null, tags: Array<string>, publishedAt?: any | null, content: string, coverImage?: { __typename?: 'Asset', url: string } | null, author?: { __typename?: 'Author', name: string, id: string, picture?: { __typename?: 'Asset', url: string } | null } | null } | null };
+export type PostQuery = { __typename?: 'Query', post?: { __typename?: 'Post', title: string, excerpt?: string | null, tags: Array<string>, publishedAt?: any | null, content: string, coverImage?: { __typename?: 'Asset', url: string, fileName: string } | null, author?: { __typename?: 'Author', name: string, id: string, picture?: { __typename?: 'Asset', url: string } | null } | null } | null };
 
 export type PostsQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -6895,6 +6895,7 @@ export const PostDocument = gql`
     content
     coverImage {
       url(transformation: {image: {resize: {width: 1400, height: 600, fit: crop}}})
+      fileName
     }
     author {
       name

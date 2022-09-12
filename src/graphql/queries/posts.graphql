@@ -5,6 +5,7 @@ query Posts {
         excerpt
         publishedAt
         tags
+        date
         coverImage {
             url(
                 transformation: {

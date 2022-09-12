@@ -5,6 +5,7 @@ query Post($slug: String!) {
         title
         excerpt
         tags
+        date
         publishedAt
         content
         coverImage {

@@ -5,6 +5,7 @@ query LastestPosts {
         excerpt
         publishedAt
         tags
+        date
         coverImage {
             url(
                 transformation: {

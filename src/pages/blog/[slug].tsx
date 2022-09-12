@@ -37,7 +37,7 @@ const BlogPost: NextPage<IBlogPost> = ({ slug }) => {
               coverImageUrl={data?.post?.coverImage?.url}
               coverImageFileName={data?.post?.coverImage?.fileName}
               tags={data?.post?.tags}
-              publishedAt={data?.post?.publishedAt}
+              publishedAt={data?.post?.date}
               content={data?.post?.content}
             />
 

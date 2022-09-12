@@ -6211,9 +6211,10 @@ export enum SystemDateTimeFieldVariation {
 export enum Tags {
   GraphQl = 'GraphQL',
   Laravel = 'Laravel',
-  Next = 'Next',
-  React = 'React',
-  Seo = 'SEO'
+  NextJs = 'NextJS',
+  ReactJs = 'ReactJS',
+  Seo = 'SEO',
+  TailwindCss = 'TailwindCSS'
 }
 
 export type UnpublishLocaleInput = {
@@ -6796,7 +6797,7 @@ export type ExperiencesQuery = { __typename?: 'Query', experiences: Array<{ __ty
 export type LastestPostsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type LastestPostsQuery = { __typename?: 'Query', posts: Array<{ __typename?: 'Post', title: string, slug: string, excerpt?: string | null, publishedAt?: any | null, tags: Array<string>, coverImage?: { __typename?: 'Asset', url: string } | null, author?: { __typename?: 'Author', name: string, id: string, picture?: { __typename?: 'Asset', url: string } | null } | null }> };
+export type LastestPostsQuery = { __typename?: 'Query', posts: Array<{ __typename?: 'Post', title: string, slug: string, excerpt?: string | null, publishedAt?: any | null, tags: Array<string>, date: any, coverImage?: { __typename?: 'Asset', url: string } | null, author?: { __typename?: 'Author', name: string, id: string, picture?: { __typename?: 'Asset', url: string } | null } | null }> };
 
 export type PageQueryVariables = Exact<{
   slug: Scalars['String'];
@@ -6810,12 +6811,12 @@ export type PostQueryVariables = Exact<{
 }>;
 
 
-export type PostQuery = { __typename?: 'Query', post?: { __typename?: 'Post', title: string, excerpt?: string | null, tags: Array<string>, publishedAt?: any | null, content: string, coverImage?: { __typename?: 'Asset', url: string, fileName: string } | null, author?: { __typename?: 'Author', name: string, id: string, picture?: { __typename?: 'Asset', url: string } | null } | null } | null };
+export type PostQuery = { __typename?: 'Query', post?: { __typename?: 'Post', title: string, excerpt?: string | null, tags: Array<string>, date: any, publishedAt?: any | null, content: string, coverImage?: { __typename?: 'Asset', url: string, fileName: string } | null, author?: { __typename?: 'Author', name: string, id: string, picture?: { __typename?: 'Asset', url: string } | null } | null } | null };
 
 export type PostsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type PostsQuery = { __typename?: 'Query', posts: Array<{ __typename?: 'Post', title: string, slug: string, excerpt?: string | null, publishedAt?: any | null, tags: Array<string>, coverImage?: { __typename?: 'Asset', url: string } | null, author?: { __typename?: 'Author', name: string, id: string, picture?: { __typename?: 'Asset', url: string } | null } | null }> };
+export type PostsQuery = { __typename?: 'Query', posts: Array<{ __typename?: 'Post', title: string, slug: string, excerpt?: string | null, publishedAt?: any | null, tags: Array<string>, date: any, coverImage?: { __typename?: 'Asset', url: string } | null, author?: { __typename?: 'Author', name: string, id: string, picture?: { __typename?: 'Asset', url: string } | null } | null }> };
 
 export type TagsQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -6849,6 +6850,7 @@ export const LastestPostsDocument = gql`
     excerpt
     publishedAt
     tags
+    date
     coverImage {
       url(transformation: {image: {resize: {width: 400}}})
     }
@@ -6891,6 +6893,7 @@ export const PostDocument = gql`
     title
     excerpt
     tags
+    date
     publishedAt
     content
     coverImage {
@@ -6919,6 +6922,7 @@ export const PostsDocument = gql`
     excerpt
     publishedAt
     tags
+    date
     coverImage {
       url(transformation: {image: {resize: {width: 400}}})
     }

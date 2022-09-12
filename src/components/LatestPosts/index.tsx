@@ -21,7 +21,7 @@ export function LatestPosts({ data }: LatestPostsProps) {
             href: `/blog/${post.slug}`,
             imageUrl: post.coverImage?.url,
             tags: post.tags,
-            date: new Date(post.publishedAt).toLocaleString('pt-br', {
+            date: new Date(post.date).toLocaleString('en-UK', {
               day: '2-digit',
               month: 'long',
               year: 'numeric'

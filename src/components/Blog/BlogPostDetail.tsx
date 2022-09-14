@@ -53,7 +53,7 @@ export function BlogPostDetail({ coverImageUrl, coverImageFileName, tags, publis
               ul: (props) => <ul className={'list-none text-slate-400'} {...props} />,
               li: (props) => (
                 <li className={'flex'} {...props}>
-                  <i className="mdi mdi-arrow-right text-black dark:text-white"></i>&nbsp;{props.children}
+                  <i className={'mdi mdi-arrow-right text-black dark:text-white'}></i>&nbsp;{props.children}
                 </li>
               )
             }}

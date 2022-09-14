@@ -16,8 +16,8 @@ const Blog: NextPage = () => {
       <SectionHeader title={'Blogs & Articles'} />
 
       <section className={'relative md:py-12 py-8'}>
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-[30px]">
+        <div className={'container'}>
+          <div className={'grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-[30px]'}>
             {data?.posts.map((post) => (
               <PostCard key={post.slug} post={{
                 title: post.title,

@@ -1,0 +1,20 @@
+query PostsByTag($tag: String!) {
+    posts(where: {tags_contains_some: [$tag]}) {
+        title
+        slug
+        excerpt
+        publishedAt
+        tags
+        date
+        coverImage {
+            url(transformation: {image: {resize: {width: 600}}})
+        }
+        author {
+            name
+            id
+            picture {
+                url(transformation: {image: {resize: {height: 40, width: 40, fit: crop}}})
+            }
+        }
+    }
+}

@@ -10,7 +10,7 @@ export function TagsCloud({ tags }: TagsCloudProps) {
       <ul className={'list-none text-center mt-8'}>
         {tags && tags.map((tag) => (
           <li key={tag.name} className={'inline-block m-2'}>
-            <a href="#" className={'px-3 py-1 text-slate-400 hover:text-white dark:hover:text-white bg-gray-50 dark:bg-slate-800 text-sm hover:bg-indigo-600 dark:hover:bg-indigo-600 rounded-md shadow dark:shadow-gray-800 transition-all duration-500 ease-in-out'}>
+            <a href={`/tag/${tag.name}`} className={'px-3 py-1 text-slate-400 hover:text-white dark:hover:text-white bg-gray-50 dark:bg-slate-800 text-sm hover:bg-indigo-600 dark:hover:bg-indigo-600 rounded-md shadow dark:shadow-gray-800 transition-all duration-500 ease-in-out'}>
               {tag.name}
             </a>
           </li>

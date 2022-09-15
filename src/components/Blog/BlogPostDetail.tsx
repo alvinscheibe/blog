@@ -2,6 +2,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import CustomCode from '../CustomCode';
+import React from 'react';
 
 type BlogPostDetailProps = {
   coverImageUrl?: string;
@@ -12,6 +13,16 @@ type BlogPostDetailProps = {
 };
 
 export function BlogPostDetail({ coverImageUrl, coverImageFileName, tags, publishedAt, content }: BlogPostDetailProps) {
+  const [hydrated, setHydrated] = React.useState(false);
+  React.useEffect(() => {
+    setHydrated(true);
+  }, []);
+  if (!hydrated) {
+    // Returns null on first render, so the client and server match
+    return null;
+  }
+
+
   return (
     <div className={'lg:col-span-8 md:col-span-6'}>
       <div className={'p-6 rounded-md shadow dark:shadow-gray-800'}>
@@ -22,7 +33,7 @@ export function BlogPostDetail({ coverImageUrl, coverImageFileName, tags, publis
             <div className={'md:float-left text-center'}>
               {tags && tags.map((tag) => {
                 return (
-                  <a key={tag} href="#" className={'bg-indigo-600 text-white text-xs font-semibold px-2.5 py-0.5 rounded w-fit mr-2 h-5'}>{tag}</a>
+                  <a key={tag} href={`/tag/${tag}`} className={'bg-indigo-600 text-white text-xs font-semibold px-2.5 py-0.5 rounded w-fit mr-2 h-5'}>{tag}</a>
                 );
               })}
             </div>

@@ -6818,6 +6818,13 @@ export type PostsQueryVariables = Exact<{ [key: string]: never; }>;
 
 export type PostsQuery = { __typename?: 'Query', posts: Array<{ __typename?: 'Post', title: string, slug: string, excerpt?: string | null, publishedAt?: any | null, tags: Array<string>, date: any, coverImage?: { __typename?: 'Asset', url: string } | null, author?: { __typename?: 'Author', name: string, id: string, picture?: { __typename?: 'Asset', url: string } | null } | null }> };
 
+export type PostsByTagQueryVariables = Exact<{
+  tag: Scalars['String'];
+}>;
+
+
+export type PostsByTagQuery = { __typename?: 'Query', posts: Array<{ __typename?: 'Post', title: string, slug: string, excerpt?: string | null, publishedAt?: any | null, tags: Array<string>, date: any, coverImage?: { __typename?: 'Asset', url: string } | null, author?: { __typename?: 'Author', name: string, id: string, picture?: { __typename?: 'Asset', url: string } | null } | null }> };
+
 export type TagsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -6924,7 +6931,7 @@ export const PostsDocument = gql`
     tags
     date
     coverImage {
-      url(transformation: {image: {resize: {width: 400}}})
+      url(transformation: {image: {resize: {width: 600}}})
     }
     author {
       name
@@ -6939,6 +6946,32 @@ export const PostsDocument = gql`
 
 export function usePostsQuery(options?: Omit<Urql.UseQueryArgs<PostsQueryVariables>, 'query'>) {
   return Urql.useQuery<PostsQuery, PostsQueryVariables>({ query: PostsDocument, ...options });
+};
+export const PostsByTagDocument = gql`
+    query PostsByTag($tag: String!) {
+  posts(where: {tags_contains_some: [$tag]}) {
+    title
+    slug
+    excerpt
+    publishedAt
+    tags
+    date
+    coverImage {
+      url(transformation: {image: {resize: {width: 600}}})
+    }
+    author {
+      name
+      id
+      picture {
+        url(transformation: {image: {resize: {height: 40, width: 40, fit: crop}}})
+      }
+    }
+  }
+}
+    `;
+
+export function usePostsByTagQuery(options: Omit<Urql.UseQueryArgs<PostsByTagQueryVariables>, 'query'>) {
+  return Urql.useQuery<PostsByTagQuery, PostsByTagQueryVariables>({ query: PostsByTagDocument, ...options });
 };
 export const TagsDocument = gql`
     query Tags {

@@ -11,7 +11,7 @@ query Posts {
                 transformation: {
                     image: {
                         resize: {
-                            width: 400
+                            width: 600
                         }
                     }
                 }

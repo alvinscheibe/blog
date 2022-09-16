@@ -48,7 +48,7 @@ const TagPosts: NextPage<ITagPosts> = ({ name }) => {
           </div>
         </div>
 
-        {data?.posts.length < 1?
+        {data && data?.posts.length < 1?
           <div className="container md:mt-12 mt-8">
             <div className="grid grid-cols-1 text-center">
               <h3 className="md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">
@@ -56,7 +56,8 @@ const TagPosts: NextPage<ITagPosts> = ({ name }) => {
               </h3>
             </div>
           </div>
-          : ''}
+          : ''
+        }
 
         <ContactMe />
       </section>

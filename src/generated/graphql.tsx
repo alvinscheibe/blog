@@ -6209,6 +6209,7 @@ export enum SystemDateTimeFieldVariation {
 }
 
 export enum Tags {
+  Aws = 'AWS',
   GraphQl = 'GraphQL',
   Laravel = 'Laravel',
   NextJs = 'NextJS',
@@ -6859,7 +6860,7 @@ export const LastestPostsDocument = gql`
     tags
     date
     coverImage {
-      url(transformation: {image: {resize: {width: 400}}})
+      url(transformation: {image: {resize: {width: 600}}})
     }
     author {
       name

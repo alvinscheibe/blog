@@ -6949,7 +6949,7 @@ export function usePostsQuery(options?: Omit<Urql.UseQueryArgs<PostsQueryVariabl
 };
 export const PostsByTagDocument = gql`
     query PostsByTag($tag: String!) {
-  posts(where: {tags_contains_some: [$tag]}) {
+  posts(where: {tags_contains_some: [$tag]}, orderBy: date_DESC) {
     title
     slug
     excerpt

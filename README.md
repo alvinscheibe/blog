@@ -6,7 +6,7 @@
     Browse programming tutorials and articles.
     <br />
     <br />
-    <a href="https://alvinscheibe.dev">View Example</a>
+    <a href="https://alvinscheibe.com/">View Example</a>
     ·
     <a href="https://github.com/alvinscheibe/blog/issues">Report Bug</a>
     ·
@@ -34,7 +34,7 @@
 
 ## About The Project
 
-![Sreenshot of alvinscheibe.dev](https://github.com/alvinscheibe/blog/blob/main/public/images/screenshot-home-page.png)
+![Sreenshot of alvinscheibe.com](https://github.com/alvinscheibe/blog/blob/main/public/images/screenshot-home-page.png)
 
 ### Built with
 

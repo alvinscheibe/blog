@@ -12,10 +12,10 @@ export function ToggleMenu() {
   }
 
   return (
-    <div className="menu-extras">
-      <div className="menu-item">
-        <a className="navbar-toggle" id="isToggle" onClick={toggleMenu}>
-          <div className="lines">
+    <div className={'menu-extras'}>
+      <div className={'menu-item'}>
+        <a className={'navbar-toggle'} id={'isToggle'} onClick={toggleMenu}>
+          <div className={'lines'}>
             <span></span>
             <span></span>
             <span></span>

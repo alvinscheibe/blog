@@ -4,6 +4,7 @@ import { client, ssrCache } from '../../lib/urql';
 import PostCard from '../../components/PostCard';
 import { SectionHeader } from '../../components/Sections/SectionHeader';
 import SeoPage from '../../components/SeoPage';
+import { ContactMe } from '../../components/ContactMe';
 
 const Blog: NextPage = () => {
   const [{ data }] = usePostsQuery();
@@ -79,6 +80,8 @@ const Blog: NextPage = () => {
           {/*  </div>*/}
           {/*</div>*/}
         </div>
+
+        <ContactMe />
       </section>
     </>
   );

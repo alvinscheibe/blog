@@ -37,7 +37,7 @@ export function SectionExperience({ data }: SectionExperienceProps) {
                     <div className={(loop > 0)? ((loop%2) === 1? 'md:order-1 order-2' : 'mt-4 mt-sm-0') : 'mt-4 md:mt-0'}>
                       {(loop%2) === 0?
                         <ExperienceDuration companyName={experience.company} duration={experience.duration} classFloat={'date-label-left md:text-right md:mr-8'} companyLogoPath={experience.companyImage? experience.companyImage.url : null} classImage={'md:ml-auto'} /> :
-                        <ExperienceDescription title={experience.job} description={experience.description} classFloat={'event-description-left float-left text-right md:mr-8'} />
+                        <ExperienceDescription title={experience.job} description={experience.description} classFloat={'event-description-left float-right text-right md:mr-8'} />
                       }
                     </div>
 

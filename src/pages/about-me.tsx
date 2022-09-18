@@ -30,7 +30,7 @@ const AboutMe: NextPage = () => {
                 <div className={'absolute inset-0 bg-indigo-600/10 rounded-md -mt-[10px] -ml-[10px] h-[98%] w-[98%] -z-1'}></div>
                 <img src={'alvin-scheibe.jpg'} className={'h-32 w-32 rounded-full shadow-md dark:shadow-gray-800'} alt={'Alvin Scheibe'} />
                 <div className={'content mt-4'}>
-                  <a href="#" className={'text-lg font-medium hover:text-indigo-600 block'}>Alvin Scheibe</a>
+                  <a href="#" className={'text-lg font-medium hover:text-indigo-600 block'}>{siteConfig.author.name}</a>
                   <span className={'text-slate-400 block'}>Full Stack Web Developer</span>
 
                   <p className={'text-slate-400 mt-2'}>Follow me on the links bellow:</p>
@@ -67,7 +67,7 @@ const AboutMe: NextPage = () => {
                 </p>
 
                 <div className={'mt-6'}>
-                  <a href={'mailto: alvin.scheibe@gmail.com'} className={'btn bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white rounded-md mr-2 mt-2'}>
+                  <a href={'mailto: ' + siteConfig.author.email} className={'btn bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white rounded-md mr-2 mt-2'}>
                     <i className={'uil uil-envelope'}></i>Contact me</a>
                 </div>
               </div>

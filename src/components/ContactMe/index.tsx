@@ -1,3 +1,5 @@
+import siteConfig from '../../../site.config';
+
 export function ContactMe() {
   return (
     <div className={'container md:mt-24 mt-16'}>
@@ -12,7 +14,7 @@ export function ContactMe() {
         </p>
 
         <div className={'mt-6'}>
-          <a href="mailto: alvin.scheibe@gmail.com" className={'btn bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white rounded-md mr-2 mt-2'}>
+          <a href={'mailto: ' + siteConfig.author.email} className={'btn bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white rounded-md mr-2 mt-2'}>
             <i className={'uil uil-phone'}></i> Contact Me
           </a>
         </div>

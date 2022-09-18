@@ -6,6 +6,10 @@ const siteConfig = {
     },
     project: 'https://github.com/alvinscheibe/blog'
   },
+  author: {
+    name: 'Alvin Scheibe',
+    email: 'alvin.scheibe@gmail.com'
+  },
   siteVersion: '1.0.0'
 };
 

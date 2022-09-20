@@ -20,7 +20,7 @@ export function Hero({ data }: HeroProps) {
                   </p>
 
                   <div className={'mt-4'}>
-                    <a href={'/about-me'} className={'btn bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white rounded-md'}>Hire me</a>
+                    <a href={'/about-me'} className={'btn bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white rounded-md'}>About me</a>
                   </div>
                 </div>
               </div>

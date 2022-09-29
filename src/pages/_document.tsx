@@ -10,7 +10,6 @@ export default class MyDocument extends Document {
         <body className={'text-base text-black dark:text-white dark:bg-slate-900'}>
           <Main />
           <NextScript />
-          {/*<script type="text/javascript" src="/app.js"></script>*/}
         </body>
       </Html>
     );

@@ -1,5 +1,5 @@
 interface SectionHeaderProps {
-  title: string
+  title: string;
 }
 
 export function SectionHeader({ title }: SectionHeaderProps) {

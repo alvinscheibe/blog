@@ -1,7 +1,7 @@
 import { PageQuery } from '../../generated/graphql';
 
 interface HeroProps {
-  data?: PageQuery
+  data?: PageQuery;
 }
 
 export function Hero({ data }: HeroProps) {
